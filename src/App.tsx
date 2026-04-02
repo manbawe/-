@@ -275,14 +275,6 @@ const SETTLEMENT_TYPES = [
     icon: <MailOpen className="w-5 h-5" />,
     label: 'Check'
   },
-  { 
-    id: 'C' as SettlementType, 
-    name: 'TYPE C: 개봉 후 권종별 현금정리', 
-    description: '전용 계수기 + 수기 더블 체크, 100장 단위 묶음(현금 띠지 사용)',
-    price: 50000,
-    icon: <Banknote className="w-5 h-5" />,
-    label: 'Count'
-  },
 ];
 
 // Custom 3D-style Logo Component
@@ -354,6 +346,10 @@ const Logo = ({ className = "w-10 h-10" }: { className?: string }) => (
 );
 
 export default function App() {
+  useEffect(() => {
+    document.title = '망고바나나웨딩';
+  }, []);
+
   // View State
   const [view, setView] = useState<'user' | 'admin' | 'intro'>('user');
   const [adminViewMode, setAdminViewMode] = useState<'list' | 'calendar' | 'data' | 'staff'>('list');
@@ -3426,7 +3422,7 @@ export default function App() {
                 <span className="text-lg font-black tracking-tight text-[#0a44b8]">망고바나나웨딩</span>
               </div>
               <p className="text-sm text-slate-500 leading-relaxed max-w-sm">
-                망고바나나웨딩은 전문적인 예식 운영 관리를 통해 신랑 신부님의 가장 행복한 순간을 가장 안전하고 효율적으로 지켜드립니다.
+                망고바나나웨딩은 전문적인 축의대 대행 서비스를 통해 신랑 신부님의 가장 행복한 순간을 가장 안전하고 효율적으로 지켜드립니다.
               </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
